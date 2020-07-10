@@ -16,7 +16,7 @@ while True:
         if event.type == VkEventType.MESSAGE_NEW:
             print('Сообщение пришло в : ' + str(datetime.strftime(datetime.now(),'%H:%M:%S')))
             print('Текст сообщения: ' + str(event.text))
-            print(event.user_id)
+            print("Сообщение пришло от: " + str(event.user_id) + "\n")
             responde = event.text.lower()
             if event.from_user and not (event.from_me):
                 if responde != '1':
